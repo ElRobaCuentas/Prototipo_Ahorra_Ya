@@ -44,8 +44,17 @@ class cuerpo extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             imagen(),
+            SizedBox(
+              height: 20.0,
+            ),
             texto(),
+            SizedBox(
+              height: 20.0,
+            ),
             boton1(),
+            SizedBox(
+              height: 35.0,
+            ),
             boton2(),
           ],
         ),
@@ -60,17 +69,15 @@ class imagen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      //margin: EdgeInsets.all(20.0),
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: NetworkImage(
-                  "https://img.freepik.com/vector-gratis/dibujos-animados-alcancia_357490-101.jpg"),
-              fit: BoxFit.cover),
+            image: NetworkImage(""), /*fit: BoxFit.cover*/
+          ),
           color: Colors.white,
-          borderRadius: BorderRadius.all(
-            Radius.circular(110.0),
-          )),
-      width: 200.0,
-      height: 150.0,
+          shape: BoxShape.circle),
+      width: 240.0,
+      height: 240.0,
     );
   }
 }
@@ -81,10 +88,10 @@ class texto extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 280.0,
+      height: 260.0,
       width: 310.0,
-      /*decoration:
-          BoxDecoration(border: Border.all(color: Colors.black, width: 1.0)),*/
+      decoration:
+          BoxDecoration(border: Border.all(color: Colors.black, width: 1.0)),
       child: Center(
         child: Text(
           'Te devolvemos el dinero de tus compras fácil y rápido',
@@ -118,10 +125,13 @@ class boton1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      /*decoration:
-          BoxDecoration(border: Border.all(color: Colors.black, width: 1.0)),*/
-      child: FlatButton(
+      width: 200.0,
+      height: 50.0,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(30.0),
         color: Color.fromARGB(255, 6, 57, 107),
+      ),
+      child: FlatButton(
         onPressed: () {},
         child: Text(
           'registrate',
@@ -138,10 +148,13 @@ class boton2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      /*decoration:
-          BoxDecoration(border: Border.all(color: Colors.purple, width: 1.0)),*/
+      width: 200.0,
+      height: 50.0,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(30.0),
+        color: Color.fromARGB(255, 255, 255, 255),
+      ),
       child: FlatButton(
-        color: Colors.white,
         onPressed: () {},
         child: Text(
           'inicia sesión',
