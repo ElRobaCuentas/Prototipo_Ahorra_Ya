@@ -90,8 +90,8 @@ class texto extends StatelessWidget {
     return Container(
       height: 260.0,
       width: 310.0,
-      decoration:
-          BoxDecoration(border: Border.all(color: Colors.black, width: 1.0)),
+      /*decoration:
+          BoxDecoration(border: Border.all(color: Colors.black, width: 1.0)),*/
       child: Center(
         child: Text(
           'Te devolvemos el dinero de tus compras fácil y rápido',
@@ -119,7 +119,13 @@ class boton1 extends StatelessWidget {
         color: Color.fromARGB(255, 6, 57, 107),
       ),
       child: FlatButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => PrimeraPestana(),
+            ),
+          );
+        },
         child: Text(
           'registrate',
           style: TextStyle(
@@ -127,6 +133,19 @@ class boton1 extends StatelessWidget {
             fontSize: 16.0,
           ),
         ),
+      ),
+    );
+  }
+}
+
+class PrimeraPestana extends StatelessWidget {
+  const PrimeraPestana({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Text('REGISTRATE:)'),
       ),
     );
   }
@@ -145,7 +164,13 @@ class boton2 extends StatelessWidget {
         color: Color.fromARGB(255, 255, 255, 255),
       ),
       child: FlatButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => SegundaPestana(),
+            ),
+          );
+        },
         child: Text(
           'inicia sesión',
           style: TextStyle(
@@ -153,6 +178,19 @@ class boton2 extends StatelessWidget {
             fontSize: 16.0,
           ),
         ),
+      ),
+    );
+  }
+}
+
+class SegundaPestana extends StatelessWidget {
+  const SegundaPestana({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Text('INISIA SESIÓN:)'),
       ),
     );
   }
