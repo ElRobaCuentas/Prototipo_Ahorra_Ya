@@ -27,7 +27,7 @@ class _incioState extends State<incio> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.amber.shade200,
+      backgroundColor: Color.fromARGB(255, 252, 219, 120),
       body: cuerpo(),
     );
   }
@@ -53,7 +53,7 @@ class cuerpo extends StatelessWidget {
             ),
             boton1(),
             SizedBox(
-              height: 35.0,
+              height: 30.0,
             ),
             boton2(),
           ],
@@ -95,29 +95,16 @@ class texto extends StatelessWidget {
       child: Center(
         child: Text(
           'Te devolvemos el dinero de tus compras fácil y rápido',
-          style:
-              TextStyle(color: Color.fromARGB(255, 6, 57, 107), fontSize: 45.0),
+          style: TextStyle(
+              color: Color.fromARGB(255, 3, 46, 88),
+              fontSize: 40.0,
+              //fontFamily: 'Poppins',
+              fontWeight: FontWeight.w900),
         ),
       ),
     );
   }
 }
-
-/*class botones extends StatelessWidget {
-  const botones({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 150.0,
-      width: 310.0,
-      decoration: BoxDecoration(
-        border: Border.all(color: Colors.blue, width: 1.0),
-      ),
-      child: boton1(),
-    );
-  }
-}*/
 
 class boton1 extends StatelessWidget {
   const boton1({Key? key}) : super(key: key);
@@ -126,7 +113,7 @@ class boton1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 200.0,
-      height: 50.0,
+      height: 47.0,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30.0),
         color: Color.fromARGB(255, 6, 57, 107),
@@ -135,7 +122,10 @@ class boton1 extends StatelessWidget {
         onPressed: () {},
         child: Text(
           'registrate',
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 16.0,
+          ),
         ),
       ),
     );
@@ -149,7 +139,7 @@ class boton2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 200.0,
-      height: 50.0,
+      height: 47.0,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30.0),
         color: Color.fromARGB(255, 255, 255, 255),
@@ -160,6 +150,7 @@ class boton2 extends StatelessWidget {
           'inicia sesión',
           style: TextStyle(
             color: Color.fromARGB(255, 6, 57, 107),
+            fontSize: 16.0,
           ),
         ),
       ),
