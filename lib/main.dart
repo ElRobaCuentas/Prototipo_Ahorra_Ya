@@ -27,14 +27,15 @@ class _incioState extends State<incio> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // appBar: AppBar(),
       backgroundColor: Color.fromARGB(255, 252, 219, 120),
-      body: cuerpo(),
+      body: firstScreen(),
     );
   }
 }
 
-class cuerpo extends StatelessWidget {
-  const cuerpo({Key? key}) : super(key: key);
+class firstScreen extends StatelessWidget {
+  const firstScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -72,12 +73,14 @@ class imagen extends StatelessWidget {
       //margin: EdgeInsets.all(20.0),
       decoration: BoxDecoration(
           image: DecorationImage(
-            image: NetworkImage(""), /*fit: BoxFit.cover*/
+            // image: NetworkImage("https://img.freepik.com/vector-gratis/dibujos-animados-alcancia_357490-101.jpg"),
+            image: AssetImage('assets/alcancia.png'),
           ),
           color: Colors.white,
           shape: BoxShape.circle),
-      width: 240.0,
-      height: 240.0,
+      // child: Image.asset('assets/alcancia.png'),
+      width: 260.0,
+      height: 260.0,
     );
   }
 }
@@ -95,11 +98,12 @@ class texto extends StatelessWidget {
       child: Center(
         child: Text(
           'Te devolvemos el dinero de tus compras fácil y rápido',
+          textAlign: TextAlign.center,
           style: TextStyle(
               color: Color.fromARGB(255, 3, 46, 88),
               fontSize: 40.0,
-              //fontFamily: 'Poppins',
-              fontWeight: FontWeight.w900),
+              // fontFamily: 'Poppins',
+              fontWeight: FontWeight.w600),
         ),
       ),
     );
@@ -145,7 +149,7 @@ class PrimeraPestana extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text('REGISTRATE:)'),
+        child: Text('registrate'),
       ),
     );
   }
@@ -190,7 +194,7 @@ class SegundaPestana extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text('INISIA SESIÓN:)'),
+        child: Text('inicia sesión'),
       ),
     );
   }
