@@ -11,31 +11,31 @@ class MiApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Ahorra Ya',
-      home: incio(),
+      home: MyHomePage(),
     );
   }
 }
 
-class incio extends StatefulWidget {
-  const incio({Key? key}) : super(key: key);
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key}) : super(key: key);
 
   @override
-  State<incio> createState() => _incioState();
+  State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _incioState extends State<incio> {
+class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       // appBar: AppBar(),
       backgroundColor: Color.fromARGB(255, 252, 219, 120),
-      body: firstScreen(),
+      body: MainScreen(),
     );
   }
 }
 
-class firstScreen extends StatelessWidget {
-  const firstScreen({Key? key}) : super(key: key);
+class MainScreen extends StatelessWidget {
+  const MainScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -44,19 +44,19 @@ class firstScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            imagen(),
+            Imagen(),
             SizedBox(
               height: 20.0,
             ),
-            texto(),
+            Texto(),
             SizedBox(
               height: 20.0,
             ),
-            boton1(),
+            SignupButton(),
             SizedBox(
               height: 30.0,
             ),
-            boton2(),
+            SigninButton(),
           ],
         ),
       ),
@@ -64,8 +64,8 @@ class firstScreen extends StatelessWidget {
   }
 }
 
-class imagen extends StatelessWidget {
-  const imagen({Key? key}) : super(key: key);
+class Imagen extends StatelessWidget {
+  const Imagen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -85,8 +85,8 @@ class imagen extends StatelessWidget {
   }
 }
 
-class texto extends StatelessWidget {
-  const texto({Key? key}) : super(key: key);
+class Texto extends StatelessWidget {
+  const Texto({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -110,8 +110,8 @@ class texto extends StatelessWidget {
   }
 }
 
-class boton1 extends StatelessWidget {
-  const boton1({Key? key}) : super(key: key);
+class SignupButton extends StatelessWidget {
+  const SignupButton({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -123,10 +123,11 @@ class boton1 extends StatelessWidget {
         color: Color.fromARGB(255, 6, 57, 107),
       ),
       child: FlatButton(
+        //FlatButton cambiar por TextButton ya que hacen lo mismo y es actual
         onPressed: () {
           Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (context) => PrimeraPestana(),
+              builder: (context) => SignupScreen(),
             ),
           );
         },
@@ -142,8 +143,8 @@ class boton1 extends StatelessWidget {
   }
 }
 
-class PrimeraPestana extends StatelessWidget {
-  const PrimeraPestana({Key? key}) : super(key: key);
+class SignupScreen extends StatelessWidget {
+  const SignupScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -155,8 +156,8 @@ class PrimeraPestana extends StatelessWidget {
   }
 }
 
-class boton2 extends StatelessWidget {
-  const boton2({Key? key}) : super(key: key);
+class SigninButton extends StatelessWidget {
+  const SigninButton({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -171,7 +172,7 @@ class boton2 extends StatelessWidget {
         onPressed: () {
           Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (context) => SegundaPestana(),
+              builder: (context) => PerfilScreen(),
             ),
           );
         },
@@ -187,8 +188,8 @@ class boton2 extends StatelessWidget {
   }
 }
 
-class SegundaPestana extends StatelessWidget {
-  const SegundaPestana({Key? key}) : super(key: key);
+class SigninScreen extends StatelessWidget {
+  const SigninScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -196,6 +197,173 @@ class SegundaPestana extends StatelessWidget {
       body: Center(
         child: Text('inicia sesión'),
       ),
+    );
+  }
+}
+
+// ==============================
+//LO QUE CALIN HIZO!!!!
+// ==============================
+class PerfilScreen extends StatelessWidget {
+  const PerfilScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Color.fromARGB(255, 252, 219, 120),
+        body: Column(children: <Widget>[PerfilCard(), NavBar()]));
+  }
+}
+
+class CategoryScreen extends StatelessWidget {
+  const CategoryScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Color.fromARGB(255, 252, 219, 120),
+        body: Column(children: <Widget>[CategoryCard(), NavBar()]));
+  }
+}
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Color.fromARGB(255, 252, 219, 120),
+        body: Column(children: <Widget>[HomeCard(), NavBar()]));
+  }
+}
+
+class NavBar extends StatelessWidget {
+  const NavBar({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        color: Color.fromARGB(255, 120, 144, 252),
+        width: 385,
+        height: 100,
+        child: Row(children: <Widget>[
+          Container(
+            color: Color.fromARGB(255, 252, 120, 241),
+            width: 128,
+            height: 100,
+            child: TextButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => HomeScreen(),
+                  ),
+                );
+              },
+              child: Text(
+                'home',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16.0,
+                ),
+              ),
+            ),
+          ),
+          Container(
+            color: Color.fromARGB(255, 252, 120, 131),
+            width: 128,
+            height: 100,
+            child: TextButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => CategoryScreen(),
+                  ),
+                );
+              },
+              child: Text(
+                'category',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16.0,
+                ),
+              ),
+            ),
+          ),
+          Container(
+            color: Color.fromARGB(255, 252, 250, 120),
+            width: 128,
+            height: 100,
+            child: TextButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => PerfilScreen(),
+                  ),
+                );
+              },
+              child: Text(
+                'perfil',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16.0,
+                ),
+              ),
+            ),
+          ),
+        ]));
+  }
+}
+
+class PerfilCard extends StatelessWidget {
+  const PerfilCard({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(30.0),
+        color: Color.fromARGB(255, 157, 252, 120),
+      ),
+      margin: EdgeInsets.only(left: 20, top: 50, right: 20, bottom: 20),
+      width: 360,
+      height: 700,
+      child: Text('PerfilCard', textAlign: TextAlign.center),
+    );
+  }
+}
+
+class CategoryCard extends StatelessWidget {
+  const CategoryCard({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(30.0),
+        color: Color.fromARGB(255, 157, 252, 120),
+      ),
+      margin: EdgeInsets.only(left: 20, top: 50, right: 20, bottom: 20),
+      width: 360,
+      height: 700,
+      child: Text('CategoryCard', textAlign: TextAlign.center),
+    );
+  }
+}
+
+class HomeCard extends StatelessWidget {
+  const HomeCard({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(30.0),
+        color: Color.fromARGB(255, 157, 252, 120),
+      ),
+      margin: EdgeInsets.only(left: 20, top: 50, right: 20, bottom: 20),
+      width: 360,
+      height: 700,
+      child: Text('HomeCard', textAlign: TextAlign.center),
     );
   }
 }
