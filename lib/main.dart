@@ -202,7 +202,7 @@ class SigninScreen extends StatelessWidget {
 }
 
 // ==============================
-//LO QUE CALIN HIZO!!!!
+//LO QUE CALIN HIZO!!!!dsfdsfsdfsd
 // ==============================
 class PerfilScreen extends StatelessWidget {
   const PerfilScreen({Key? key}) : super(key: key);
@@ -226,16 +226,16 @@ class CategoryScreen extends StatelessWidget {
   }
 }
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+// class HomeScreen extends StatelessWidget {
+//   const HomeScreen({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: Color.fromARGB(255, 252, 219, 120),
-        body: Column(children: <Widget>[HomeCard(), NavBar()]));
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//         backgroundColor: Color.fromARGB(255, 252, 219, 120),
+//         body: Column(children: <Widget>[HomeCard(), NavBar()]));
+//   }
+// }
 
 class NavBar extends StatelessWidget {
   const NavBar({Key? key}) : super(key: key);
@@ -244,8 +244,8 @@ class NavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         color: Color.fromARGB(255, 120, 144, 252),
-        width: 385,
-        height: 100,
+        // width: 385,
+        // height: 100,
         child: Row(children: <Widget>[
           Container(
             color: Color.fromARGB(255, 252, 120, 241),
