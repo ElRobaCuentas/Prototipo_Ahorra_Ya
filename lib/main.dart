@@ -202,7 +202,7 @@ class SigninScreen extends StatelessWidget {
 }
 
 // ==============================
-//LO QUE CALIN HIZO!!!!dsfdsfsdfsd
+//LO QUE CALIN HIZO!!!!
 // ==============================
 class PerfilScreen extends StatelessWidget {
   const PerfilScreen({Key? key}) : super(key: key);
@@ -226,16 +226,16 @@ class CategoryScreen extends StatelessWidget {
   }
 }
 
-// class HomeScreen extends StatelessWidget {
-//   const HomeScreen({Key? key}) : super(key: key);
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({Key? key}) : super(key: key);
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//         backgroundColor: Color.fromARGB(255, 252, 219, 120),
-//         body: Column(children: <Widget>[HomeCard(), NavBar()]));
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Color.fromARGB(255, 252, 219, 120),
+        body: Column(children: <Widget>[HomeCard(), NavBar()]));
+  }
+}
 
 class NavBar extends StatelessWidget {
   const NavBar({Key? key}) : super(key: key);
@@ -244,13 +244,15 @@ class NavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         color: Color.fromARGB(255, 120, 144, 252),
-        // width: 385,
-        // height: 100,
+        width: 360,
+        height: 68,
         child: Row(children: <Widget>[
           Container(
             color: Color.fromARGB(255, 252, 120, 241),
-            width: 128,
-            height: 100,
+            width: 120,
+            height: 80,
+            // width: 128,
+            // height: 100,
             child: TextButton(
               onPressed: () {
                 Navigator.of(context).push(
@@ -270,8 +272,8 @@ class NavBar extends StatelessWidget {
           ),
           Container(
             color: Color.fromARGB(255, 252, 120, 131),
-            width: 128,
-            height: 100,
+            width: 120,
+            height: 80,
             child: TextButton(
               onPressed: () {
                 Navigator.of(context).push(
@@ -291,8 +293,8 @@ class NavBar extends StatelessWidget {
           ),
           Container(
             color: Color.fromARGB(255, 252, 250, 120),
-            width: 128,
-            height: 100,
+            width: 120,
+            height: 80,
             child: TextButton(
               onPressed: () {
                 Navigator.of(context).push(
@@ -326,7 +328,7 @@ class PerfilCard extends StatelessWidget {
       ),
       margin: EdgeInsets.only(left: 20, top: 50, right: 20, bottom: 20),
       width: 360,
-      height: 700,
+      height: 600,
       child: Text('PerfilCard', textAlign: TextAlign.center),
     );
   }
@@ -344,7 +346,7 @@ class CategoryCard extends StatelessWidget {
       ),
       margin: EdgeInsets.only(left: 20, top: 50, right: 20, bottom: 20),
       width: 360,
-      height: 700,
+      height: 600,
       child: Text('CategoryCard', textAlign: TextAlign.center),
     );
   }
@@ -362,7 +364,7 @@ class HomeCard extends StatelessWidget {
       ),
       margin: EdgeInsets.only(left: 20, top: 50, right: 20, bottom: 20),
       width: 360,
-      height: 700,
+      height: 600,
       child: Text('HomeCard', textAlign: TextAlign.center),
     );
   }
