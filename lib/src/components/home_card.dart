@@ -8,8 +8,26 @@ class HomeCard extends StatelessWidget {
     return Container(
       // margin: EdgeInsets.only(left: 20, top: 50, right: 20, bottom: 20),
       child: ListView(children: <Widget>[
-        Container(margin: EdgeInsets.all(16), child: Text("hola mundo")),
-        Container(margin: EdgeInsets.all(16), child: Text("hola mundo")),
+        Container(
+            decoration: BoxDecoration(color: Colors.red),
+            height: 100,
+            margin: EdgeInsets.all(16),
+            child: Center()),
+        Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.black, width: 1),
+              // color: Colors.red,
+            ),
+            height: 50,
+            child: Text(
+              "hola mundo",
+              textAlign: TextAlign.center,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                color: Colors.red,
+                fontSize: 20.0,
+              ),
+            )),
         Container(margin: EdgeInsets.all(16), child: Text("hola mundo")),
       ]),
     );
