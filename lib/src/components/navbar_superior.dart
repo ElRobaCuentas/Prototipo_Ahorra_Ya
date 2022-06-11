@@ -46,7 +46,7 @@ class NavBarSuperior extends StatelessWidget {
             );
           },
           child: Text(
-            'perfil',
+            'search',
             style: TextStyle(
               color: Colors.white,
               fontSize: 16.0,

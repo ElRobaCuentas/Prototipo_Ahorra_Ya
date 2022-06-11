@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class CategoryCard extends StatelessWidget {
@@ -6,14 +8,190 @@ class CategoryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(30.0),
-        color: Color.fromARGB(255, 157, 252, 120),
-      ),
-      margin: EdgeInsets.only(left: 20, top: 50, right: 20, bottom: 20),
-      width: 360,
-      height: 700,
-      child: Text('CategoryCard', textAlign: TextAlign.center),
-    );
+        //margin: EdgeInsets.only(left: 1, top: 1, right: 1, bottom: 1),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10.0),
+          color: Color.fromARGB(255, 157, 252, 120),
+        ),
+        child: Column(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.red, width: 1.0),
+              ),
+              width: 300,
+              height: 70,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    'Categorías',
+                    style: TextStyle(fontSize: 30.0),
+                  ),
+                  Icon(
+                    Icons.search,
+                    size: 40,
+                  )
+                ],
+              ),
+            ),
+            Container(
+              child: Column(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.black, width: 1.0),
+                    ),
+                    margin: EdgeInsets.only(
+                        left: 20, top: 20, right: 20, bottom: 20),
+                    height: 70,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Image.network(
+                            "https://w7.pngwing.com/pngs/645/996/png-transparent-fizzy-drinks-world-of-coca-cola-sprite-fanta-coca-cola-cola-wars-fanta-fizzy-drinks-thumbnail.png"),
+                        Text(
+                          'Bebidas',
+                          style: TextStyle(fontSize: 25),
+                        ),
+                        Container(
+                          height: 70,
+                          decoration: BoxDecoration(
+                            border: Border(
+                              left: BorderSide(
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                          child: IconButton(
+                            onPressed: () {},
+                            icon: Icon(Icons.add),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              child: Column(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.black, width: 1.0),
+                    ),
+                    margin: EdgeInsets.only(
+                        left: 20, top: 20, right: 20, bottom: 20),
+                    height: 70,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Image.network(
+                            "https://w7.pngwing.com/pngs/645/996/png-transparent-fizzy-drinks-world-of-coca-cola-sprite-fanta-coca-cola-cola-wars-fanta-fizzy-drinks-thumbnail.png"),
+                        Text(
+                          'Abarrotes',
+                          style: TextStyle(fontSize: 25),
+                        ),
+                        Container(
+                          height: 70,
+                          decoration: BoxDecoration(
+                            border: Border(
+                              left: BorderSide(
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                          child: IconButton(
+                            onPressed: () {},
+                            icon: Icon(Icons.add),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              child: Column(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.black, width: 1.0),
+                    ),
+                    margin: EdgeInsets.only(
+                        left: 20, top: 20, right: 20, bottom: 20),
+                    height: 70,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Image.network(
+                            "https://w7.pngwing.com/pngs/645/996/png-transparent-fizzy-drinks-world-of-coca-cola-sprite-fanta-coca-cola-cola-wars-fanta-fizzy-drinks-thumbnail.png"),
+                        Text(
+                          'Panadería',
+                          style: TextStyle(fontSize: 25),
+                        ),
+                        Container(
+                          height: 70,
+                          decoration: BoxDecoration(
+                            border: Border(
+                              left: BorderSide(
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                          child: IconButton(
+                            onPressed: () {},
+                            icon: Icon(Icons.add),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              child: Column(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.black, width: 1.0),
+                    ),
+                    margin: EdgeInsets.only(
+                        left: 20, top: 20, right: 20, bottom: 20),
+                    height: 70,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Image.network(
+                            "https://w7.pngwing.com/pngs/645/996/png-transparent-fizzy-drinks-world-of-coca-cola-sprite-fanta-coca-cola-cola-wars-fanta-fizzy-drinks-thumbnail.png"),
+                        Text(
+                          'Carnes',
+                          style: TextStyle(fontSize: 25),
+                        ),
+                        Container(
+                          height: 70,
+                          decoration: BoxDecoration(
+                            border: Border(
+                              left: BorderSide(
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                          child: IconButton(
+                            onPressed: () {},
+                            icon: Icon(Icons.add),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            )
+          ],
+        ));
   }
 }

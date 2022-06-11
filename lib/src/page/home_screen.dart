@@ -23,10 +23,16 @@ class HomeScreen extends StatelessWidget {
                   color: Colors.red,
                   child: NavBarSuperior()),
               Container(
-                  height: alto * 0.7,
-                  width: ancho * 0.9,
-                  color: Color.fromARGB(255, 168, 185, 161),
-                  child: Text("home screen")),
+                height: alto * 0.7,
+                width: ancho * 0.9,
+                color: Color.fromARGB(255, 168, 185, 161),
+                child: Center(
+                  child: Text(
+                    "home screen",
+                    style: TextStyle(fontSize: 30.0),
+                  ),
+                ),
+              ),
               Container(
                   height: alto * 0.1,
                   color: Color.fromARGB(255, 54, 98, 244),
