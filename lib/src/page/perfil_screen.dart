@@ -19,19 +19,17 @@ class PerfilScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Container(
-                height: alto * 0.025,
-                // color: Colors.red,
-              ),
+                  //height: alto * 0.025,
+                  // color: Colors.red,
+                  ),
               Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                  color: Color.fromARGB(255, 255, 232, 162),
+                ),
                 height: alto * 0.8,
                 width: ancho * 0.9,
-                color: Color.fromARGB(255, 168, 185, 161),
-                child: Center(
-                  child: Text(
-                    "perfil screen",
-                    style: TextStyle(fontSize: 30.0),
-                  ),
-                ),
+                child: PerfilCard(),
               ),
               Container(
                   height: alto * 0.10,
