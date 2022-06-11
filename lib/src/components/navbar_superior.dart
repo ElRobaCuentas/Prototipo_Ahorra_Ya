@@ -3,8 +3,8 @@ import 'package:AhorraYa/src/page/home_screen.dart';
 import 'package:AhorraYa/src/page/perfil_screen.dart';
 import 'package:AhorraYa/src/page/category_screen.dart';
 
-class NavBar extends StatelessWidget {
-  const NavBar({Key? key}) : super(key: key);
+class NavBarSuperior extends StatelessWidget {
+  const NavBarSuperior({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,24 +31,12 @@ class NavBar extends StatelessWidget {
         ),
       ),
       Expanded(
-        child: TextButton(
-          onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => CategoryScreen(),
-              ),
-            );
-          },
-          child: Text(
-            'category',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 16.0,
-            ),
-          ),
-        ),
-      ),
+          flex: 2,
+          child: Container(
+            color: Colors.green,
+          )),
       Expanded(
+        flex: 1,
         child: TextButton(
           onPressed: () {
             Navigator.of(context).push(
