@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
 import 'package:AhorraYa/src/page/main_screen.dart';
 
 void main() {
@@ -10,6 +12,11 @@ class MiApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //PARA EVITAR LA ROTACION DEL DISPOSITIVO
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
+
     return MaterialApp(
       title: 'Ahorra Ya',
       home: MyHomePage(),

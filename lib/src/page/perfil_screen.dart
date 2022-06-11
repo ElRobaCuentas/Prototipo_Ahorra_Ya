@@ -29,7 +29,7 @@ class PerfilScreen extends StatelessWidget {
                   child: Text("perfil screen")),
               Container(
                   height: alto * 0.1,
-                  color: Color.fromARGB(255, 54, 98, 244),
+                  color: Color.fromRGBO(5, 39, 92, 1),
                   child: NavBar()),
             ]))));
   }

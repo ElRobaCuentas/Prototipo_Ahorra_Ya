@@ -10,62 +10,77 @@ class NavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(children: <Widget>[
       Expanded(
-        // height: 50,
-        // width: 50,
-        // color: Color.fromARGB(255, 54, 244, 63),
-        child: TextButton(
-          onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => HomeScreen(),
+          child: Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.black, width: 1),
               ),
-            );
-          },
-          child: Text(
-            'home',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 16.0,
-            ),
-          ),
-        ),
-      ),
+              child: Center(
+                child: TextButton(
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => HomeScreen(),
+                        ),
+                      );
+                    },
+                    child: Icon(
+                      Icons.home,
+                      size: 36,
+                      color: Colors.white,
+                    )),
+              ))),
       Expanded(
-        child: TextButton(
-          onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => CategoryScreen(),
+          child: Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.black, width: 1),
               ),
-            );
-          },
-          child: Text(
-            'category',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 16.0,
-            ),
-          ),
-        ),
-      ),
+              child: Center(
+                child: TextButton(
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => CategoryScreen(),
+                        ),
+                      );
+                    },
+                    child: Icon(
+                      Icons.shopify,
+                      size: 36,
+                      color: Colors.white,
+                    )),
+              ))),
       Expanded(
-        child: TextButton(
-          onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => PerfilScreen(),
+          child: Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.black, width: 1),
               ),
-            );
-          },
-          child: Text(
-            'perfil',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 16.0,
-            ),
-          ),
-        ),
-      )
+              child: Center(
+                child: TextButton(
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => PerfilScreen(),
+                        ),
+                      );
+                    },
+                    child: Icon(
+                      Icons.account_circle,
+                      size: 36,
+                      color: Colors.white,
+                    )),
+              ))),
     ]);
   }
 }
+
+
+
+// Icons.shopify,
+// Icons.contact_support,
+// Icons.contact_phone,
+// Icons.currency_exchange,
+// Icons.camera_alt,
+// Icons.home,
+// Icons.sensor_occupied,
+// Icons.account_circle,
+// Icons.person_sharp,

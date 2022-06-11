@@ -10,50 +10,50 @@ class NavBarSuperior extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(children: <Widget>[
       Expanded(
-        // height: 50,
-        // width: 50,
-        // color: Color.fromARGB(255, 54, 244, 63),
-        child: TextButton(
-          onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => HomeScreen(),
+          child: Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.black, width: 1),
               ),
-            );
-          },
-          child: Text(
-            'home',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 16.0,
-            ),
-          ),
-        ),
-      ),
+              child: Center(
+                child: TextButton(
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => HomeScreen(),
+                        ),
+                      );
+                    },
+                    child: Icon(
+                      Icons.menu,
+                      size: 36,
+                      color: Colors.white,
+                    )),
+              ))),
       Expanded(
           flex: 2,
           child: Container(
-            color: Colors.green,
-          )),
+              // color: Colors.green,
+              )),
       Expanded(
-        flex: 1,
-        child: TextButton(
-          onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => PerfilScreen(),
+          child: Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.black, width: 1),
               ),
-            );
-          },
-          child: Text(
-            'perfil',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 16.0,
-            ),
-          ),
-        ),
-      )
+              child: Center(
+                child: TextButton(
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => HomeScreen(),
+                        ),
+                      );
+                    },
+                    child: Icon(
+                      Icons.search,
+                      size: 36,
+                      color: Colors.white,
+                    )),
+              ))),
     ]);
   }
 }

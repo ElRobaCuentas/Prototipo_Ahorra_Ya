@@ -20,7 +20,7 @@ class CategoryScreen extends StatelessWidget {
                     children: <Widget>[
               Container(
                   height: alto * 0.1,
-                  color: Colors.red,
+                  color: Color.fromRGBO(5, 39, 92, 1),
                   child: NavBarSuperior()),
               Container(
                   height: alto * 0.7,
@@ -29,7 +29,7 @@ class CategoryScreen extends StatelessWidget {
                   child: Text("category screen")),
               Container(
                   height: alto * 0.1,
-                  color: Color.fromARGB(255, 54, 98, 244),
+                  color: Color.fromRGBO(5, 39, 92, 1),
                   child: NavBar()),
             ]))));
   }
