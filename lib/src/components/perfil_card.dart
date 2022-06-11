@@ -13,38 +13,76 @@ class PerfilCard extends StatelessWidget {
           margin: EdgeInsets.only(top: 20),
           height: alto * 0.35,
           width: ancho * 0.8,
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.black),
-          ),
+          // decoration: BoxDecoration(
+          //   border: Border.all(color: Colors.black),
+          // ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Row(
-                children: <Widget>[
-                  Text(
-                    'Perfil',
-                    style: TextStyle(
-                        fontSize: 30.0, color: Color.fromARGB(255, 6, 28, 116)),
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 6, 28, 116),
-                        shape: BoxShape.circle,
-                        border: Border.all(color: Colors.black)),
-                    margin: EdgeInsets.only(left: 50),
-                    child: Icon(
-                      Icons.supervised_user_circle_outlined,
-                      size: 48,
-                      color: Colors.white,
+              Container(
+                margin: EdgeInsets.only(top: 13),
+                // decoration:
+                //     BoxDecoration(border: Border.all(color: Colors.red)),
+                child: Row(
+                  children: <Widget>[
+                    Text(
+                      'Perfil',
+                      style: TextStyle(
+                          fontSize: 30.0,
+                          color: Color.fromARGB(255, 6, 28, 116)),
                     ),
-                  ),
-                ],
+                    Container(
+                      decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 6, 28, 116),
+                          shape: BoxShape.circle,
+                          border: Border.all(color: Colors.black)),
+                      margin: EdgeInsets.only(left: 50),
+                      child: Icon(
+                        Icons.account_circle,
+                        size: 48,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              Text('Nombre'),
-              Text('Código de usuario'),
-              Text('Correo'),
-              Text('Retorno Acumulado')
+              Container(
+                height: alto * 0.15,
+                //margin: EdgeInsets.only(bottom: 20),
+                // decoration:
+                //     BoxDecoration(border: Border.all(color: Colors.red)),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      child: Text(
+                        'Nombre',
+                        style: TextStyle(fontSize: 17),
+                      ),
+                    ),
+                    Container(
+                      child: Text(
+                        'Código de usuario',
+                        style: TextStyle(fontSize: 17),
+                      ),
+                    ),
+                    Container(
+                      child: Text(
+                        'Correo',
+                        style: TextStyle(fontSize: 17),
+                      ),
+                    ),
+                    Container(
+                      child: Text(
+                        'Retorno acumulado',
+                        style: TextStyle(fontSize: 17),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
@@ -54,9 +92,9 @@ class PerfilCard extends StatelessWidget {
         Container(
             height: alto * 0.35,
             width: ancho * 0.8,
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.black),
-            ),
+            // decoration: BoxDecoration(
+            //   border: Border.all(color: Colors.black),
+            // ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -71,16 +109,17 @@ class PerfilCard extends StatelessWidget {
                             border: Border.all(color: Colors.black)),
                         margin: EdgeInsets.only(right: 20),
                         child: Icon(
-                          Icons.supervised_user_circle_outlined,
+                          Icons.camera_alt,
                           size: 48,
                           color: Colors.white,
                         ),
                       ),
                       Text(
-                        'ESCÁNEAR',
+                        'ESCÁNER',
                         style: TextStyle(
-                            fontSize: 25.0,
-                            color: Color.fromARGB(255, 6, 28, 116)),
+                            fontSize: 20.0,
+                            color: Color.fromARGB(255, 6, 28, 116),
+                            fontWeight: FontWeight.w600),
                       ),
                     ],
                   ),
@@ -93,17 +132,20 @@ class PerfilCard extends StatelessWidget {
                             color: Color.fromARGB(255, 6, 28, 116),
                             shape: BoxShape.circle,
                             border: Border.all(color: Colors.black)),
+                        margin: EdgeInsets.only(right: 20),
                         child: Icon(
-                          Icons.supervised_user_circle_outlined,
+                          Icons.currency_exchange,
                           size: 48,
                           color: Colors.white,
                         ),
                       ),
                       Text(
-                        'ESCÁNEAR',
+                        'OBTÉN TU RETORNO',
                         style: TextStyle(
-                            fontSize: 25.0,
-                            color: Color.fromARGB(255, 6, 28, 116)),
+                          fontSize: 20.0,
+                          color: Color.fromARGB(255, 6, 28, 116),
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
                     ],
                   ),
@@ -116,17 +158,20 @@ class PerfilCard extends StatelessWidget {
                             color: Color.fromARGB(255, 6, 28, 116),
                             shape: BoxShape.circle,
                             border: Border.all(color: Colors.black)),
+                        margin: EdgeInsets.only(right: 20),
                         child: Icon(
-                          Icons.supervised_user_circle_outlined,
+                          Icons.contact_support,
                           size: 48,
                           color: Colors.white,
                         ),
                       ),
                       Text(
-                        'ESCÁNEAR',
+                        'CONTÁCTANOS',
                         style: TextStyle(
-                            fontSize: 25.0,
-                            color: Color.fromARGB(255, 6, 28, 116)),
+                          fontSize: 20.0,
+                          color: Color.fromARGB(255, 6, 28, 116),
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
                     ],
                   ),

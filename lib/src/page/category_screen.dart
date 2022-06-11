@@ -12,7 +12,7 @@ class CategoryScreen extends StatelessWidget {
     double alto = MediaQuery.of(context).size.height;
     double ancho = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 240, 197, 67),
+      backgroundColor: Color.fromARGB(255, 252, 219, 120),
       // body: Column(children: <Widget>[CategoryCard(), NavBar()]));
       body: SafeArea(
         child: Center(
