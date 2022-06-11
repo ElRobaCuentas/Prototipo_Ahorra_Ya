@@ -19,9 +19,9 @@ class PerfilCard extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+            children: <Widget>[
               Row(
-                children: [
+                children: <Widget>[
                   Text(
                     'Perfil',
                     style: TextStyle(
@@ -52,81 +52,87 @@ class PerfilCard extends StatelessWidget {
           height: 40.0,
         ),
         Container(
-          height: alto * 0.35,
-          width: ancho * 0.8,
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.black),
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 6, 28, 116),
-                        shape: BoxShape.circle,
-                        border: Border.all(color: Colors.black)),
-                    margin: EdgeInsets.only(left: 50),
-                    child: Icon(
-                      Icons.supervised_user_circle_outlined,
-                      size: 48,
-                      color: Colors.white,
-                    ),
+            height: alto * 0.35,
+            width: ancho * 0.8,
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.black),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                Container(
+                  child: Row(
+                    children: <Widget>[
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 6, 28, 116),
+                            shape: BoxShape.circle,
+                            border: Border.all(color: Colors.black)),
+                        margin: EdgeInsets.only(right: 20),
+                        child: Icon(
+                          Icons.supervised_user_circle_outlined,
+                          size: 48,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Text(
+                        'ESCÁNEAR',
+                        style: TextStyle(
+                            fontSize: 25.0,
+                            color: Color.fromARGB(255, 6, 28, 116)),
+                      ),
+                    ],
                   ),
-                  Text(
-                    'ESCÁNEAR',
-                    style: TextStyle(
-                        fontSize: 25.0, color: Color.fromARGB(255, 6, 28, 116)),
+                ),
+                Container(
+                  child: Row(
+                    children: <Widget>[
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 6, 28, 116),
+                            shape: BoxShape.circle,
+                            border: Border.all(color: Colors.black)),
+                        child: Icon(
+                          Icons.supervised_user_circle_outlined,
+                          size: 48,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Text(
+                        'ESCÁNEAR',
+                        style: TextStyle(
+                            fontSize: 25.0,
+                            color: Color.fromARGB(255, 6, 28, 116)),
+                      ),
+                    ],
                   ),
-                ],
-              ),
-              Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 6, 28, 116),
-                        shape: BoxShape.circle,
-                        border: Border.all(color: Colors.black)),
-                    margin: EdgeInsets.only(left: 50),
-                    child: Icon(
-                      Icons.supervised_user_circle_outlined,
-                      size: 48,
-                      color: Colors.white,
-                    ),
+                ),
+                Container(
+                  child: Row(
+                    children: <Widget>[
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 6, 28, 116),
+                            shape: BoxShape.circle,
+                            border: Border.all(color: Colors.black)),
+                        child: Icon(
+                          Icons.supervised_user_circle_outlined,
+                          size: 48,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Text(
+                        'ESCÁNEAR',
+                        style: TextStyle(
+                            fontSize: 25.0,
+                            color: Color.fromARGB(255, 6, 28, 116)),
+                      ),
+                    ],
                   ),
-                  Text(
-                    'OBTÉN TU RETORNO',
-                    style: TextStyle(
-                        fontSize: 25.0, color: Color.fromARGB(255, 6, 28, 116)),
-                  ),
-                ],
-              ),
-              Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 6, 28, 116),
-                        shape: BoxShape.circle,
-                        border: Border.all(color: Colors.black)),
-                    margin: EdgeInsets.only(left: 50),
-                    child: Icon(
-                      Icons.supervised_user_circle_outlined,
-                      size: 48,
-                      color: Colors.white,
-                    ),
-                  ),
-                  Text(
-                    'CONTÁCTANOS',
-                    style: TextStyle(
-                        fontSize: 25.0, color: Color.fromARGB(255, 6, 28, 116)),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        )
+                ),
+              ],
+            ))
       ],
     );
   }
