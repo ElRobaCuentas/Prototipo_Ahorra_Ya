@@ -12,25 +12,33 @@ class PerfilScreen extends StatelessWidget {
     double ancho = MediaQuery.of(context).size.width;
 
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 252, 219, 120),
-        body: SafeArea(
-            child: Center(
-                child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
+      backgroundColor: Color.fromARGB(255, 252, 219, 120),
+      body: SafeArea(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
               Container(
-                height: alto * 0.025,
-                // color: Colors.red,
+                  //height: alto * 0.025,
+                  // color: Colors.red,
+                  ),
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                  color: Color.fromARGB(255, 255, 232, 162),
+                ),
+                height: alto * 0.8,
+                width: ancho * 0.9,
+                child: PerfilCard(),
               ),
               Container(
-                  height: alto * 0.8,
-                  width: ancho * 0.9,
-                  color: Color.fromARGB(255, 168, 185, 161),
-                  child: Text("perfil screen")),
-              Container(
-                  height: alto * 0.1,
-                  color: Color.fromRGBO(5, 39, 92, 1),
+                  height: alto * 0.10,
+                  color: Color.fromARGB(255, 54, 98, 244),
                   child: NavBar()),
-            ]))));
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
