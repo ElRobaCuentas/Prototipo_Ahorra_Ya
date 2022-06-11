@@ -23,9 +23,9 @@ class HomeScreen extends StatelessWidget {
                   color: Color.fromRGBO(5, 39, 92, 1),
                   child: NavBarSuperior()),
               Container(
-                  height: alto * 0.7,
-                  width: ancho * 0.9,
-                  color: Color.fromARGB(255, 168, 185, 161),
+                  height: alto * 0.75,
+                  // width: ancho * 0.9,
+                  // color: Color.fromARGB(255, 168, 185, 161),
                   child: HomeCard()),
               Container(
                   height: alto * 0.1,
