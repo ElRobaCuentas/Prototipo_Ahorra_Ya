@@ -24,9 +24,12 @@ class CategoryScreen extends StatelessWidget {
                   color: Colors.red,
                   child: NavBarSuperior()),
               Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                  color: Color.fromARGB(255, 157, 252, 120),
+                ),
                 height: alto * 0.7,
                 width: ancho * 0.9,
-                color: Color.fromARGB(255, 255, 255, 255),
                 child: CategoryCard(),
               ),
               Container(
