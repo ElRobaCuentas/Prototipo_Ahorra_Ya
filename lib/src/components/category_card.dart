@@ -124,7 +124,7 @@ class CategoryCard extends StatelessWidget {
                       // ),
                       height: alto * 0.070,
                       child: Image.network(
-                          "https://thumbs.dreamstime.com/b/coca-cola-fanta-latas-del-sprite-22068969.jpg"),
+                          "https://i.pinimg.com/originals/c6/e6/cf/c6e6cf739a7c0a65a04d0fa8d1c0e8a7.jpg"),
                     ),
                     Text(
                       'Abarrotes',
@@ -142,7 +142,14 @@ class CategoryCard extends StatelessWidget {
                         ),
                       ),
                       child: IconButton(
-                        onPressed: () {},
+                        color: Color.fromARGB(255, 215, 171, 38),
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => BebidasScreen(),
+                            ),
+                          );
+                        },
                         icon: Icon(Icons.add),
                       ),
                     ),
@@ -173,7 +180,7 @@ class CategoryCard extends StatelessWidget {
                       // ),
                       height: alto * 0.070,
                       child: Image.network(
-                          "https://thumbs.dreamstime.com/b/coca-cola-fanta-latas-del-sprite-22068969.jpg"),
+                          "https://cdn5.dibujos.net/dibujos/pintados/201546/barra-de-pan-comida-pan-y-pasta-10244571.jpg"),
                     ),
                     Text(
                       'Panadería',
@@ -191,7 +198,14 @@ class CategoryCard extends StatelessWidget {
                         ),
                       ),
                       child: IconButton(
-                        onPressed: () {},
+                        color: Color.fromARGB(255, 215, 171, 38),
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => BebidasScreen(),
+                            ),
+                          );
+                        },
                         icon: Icon(Icons.add),
                       ),
                     ),
@@ -222,7 +236,7 @@ class CategoryCard extends StatelessWidget {
                       // ),
                       height: alto * 0.070,
                       child: Image.network(
-                          "https://thumbs.dreamstime.com/b/coca-cola-fanta-latas-del-sprite-22068969.jpg"),
+                          "https://us.123rf.com/450wm/pandavector/pandavector1610/pandavector161003317/64250695-icono-de-carne-en-estilo-de-dibujos-animados-aislado-en-el-fondo-blanco-ilustraci%C3%B3n-vectorial-s%C3%ADmbol.jpg"),
                     ),
                     Text(
                       'Carnes',
@@ -242,7 +256,14 @@ class CategoryCard extends StatelessWidget {
                         ),
                       ),
                       child: IconButton(
-                        onPressed: () {},
+                        color: Color.fromARGB(255, 215, 171, 38),
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => BebidasScreen(),
+                            ),
+                          );
+                        },
                         icon: Icon(Icons.add),
                       ),
                     ),
@@ -273,7 +294,7 @@ class CategoryCard extends StatelessWidget {
                       // ),
                       height: alto * 0.070,
                       child: Image.network(
-                          "https://thumbs.dreamstime.com/b/coca-cola-fanta-latas-del-sprite-22068969.jpg"),
+                          "https://us.123rf.com/450wm/pandavector/pandavector1702/pandavector170200089/70913355-icono-de-jab%C3%B3n-en-estilo-de-dibujos-animados-aislado-sobre-fondo-blanco-s%C3%ADmbolo-de-limpieza-ilustrac.jpg"),
                     ),
                     Text(
                       'Aseo',
@@ -293,7 +314,14 @@ class CategoryCard extends StatelessWidget {
                         ),
                       ),
                       child: IconButton(
-                        onPressed: () {},
+                        color: Color.fromARGB(255, 215, 171, 38),
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => BebidasScreen(),
+                            ),
+                          );
+                        },
                         icon: Icon(Icons.add),
                       ),
                     ),
