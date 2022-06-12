@@ -17,8 +17,7 @@ class HomeCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Image(
-                    image: NetworkImage(
-                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-5n4GO8NoxQqloC29mQ2Jizp-bFMxnmIT7w&usqp=CAU'),
+                    image: AssetImage("assets/cachito.jpg"),
                   ),
                   Text("Panaderia", style: TextStyle(fontSize: 36))
                 ])),
@@ -52,8 +51,7 @@ class HomeCard extends StatelessWidget {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Image(
-                      image: NetworkImage(
-                          'https://e39a9f00db6c5bc097f9-75bc5dce1d64f93372e7c97ed35869cb.ssl.cf1.rackcdn.com/40684201-2ska-C16-large.jpg'),
+                      image: AssetImage("assets/bimbo.jpg"),
                     ),
                   ),
                 ),
@@ -112,8 +110,7 @@ class HomeCard extends StatelessWidget {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Image(
-                      image: NetworkImage(
-                          'https://s.cornershopapp.com/product-images/2269648.jpg?versionId=R6v.zufb9jsRGq.caal3YuVTnNRTamPW'),
+                      image: AssetImage("assets/chia_linaza.jpg"),
                     ),
                   ),
                 ),
@@ -172,8 +169,7 @@ class HomeCard extends StatelessWidget {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Image(
-                      image: NetworkImage(
-                          'https://www.corporacionliderperu.com/shop/32879-large_default/field-galletas-vainilla-x-222-gr-six-pack.jpg'),
+                      image: AssetImage("assets/galleta_field.jpg"),
                     ),
                   ),
                 ),
@@ -232,8 +228,7 @@ class HomeCard extends StatelessWidget {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Image(
-                      image: NetworkImage(
-                          'https://www.corporacionliderperu.com/shop/29384-large_default/bimbo-marinela-gansito-keke-x-50-gr.jpg'),
+                      image: AssetImage("assets/gansito.jpg"),
                     ),
                   ),
                 ),
