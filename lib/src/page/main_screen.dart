@@ -15,7 +15,7 @@ class MainScreen extends StatelessWidget {
           children: [
             MainLogo(),
             SizedBox(
-              height: 20.0,
+              height: 12.0,
             ),
             Container(
               height: 260.0,

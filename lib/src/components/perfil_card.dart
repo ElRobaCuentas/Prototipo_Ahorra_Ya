@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:AhorraYa/src/page/main_screen.dart';
 
 class PerfilCard extends StatelessWidget {
   const PerfilCard({Key? key}) : super(key: key);
@@ -57,27 +58,59 @@ class PerfilCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      child: Text(
-                        'Nombre',
-                        style: TextStyle(fontSize: 17),
+                      child: Row(
+                        children: [
+                          Text(
+                            'Nombre:  ',
+                            style: TextStyle(fontSize: 17),
+                          ),
+                          Text(
+                            'Ramiro Lopez Pino',
+                            style: Theme.of(context).textTheme.headline6,
+                          ),
+                        ],
                       ),
                     ),
                     Container(
-                      child: Text(
-                        'Código de usuario',
-                        style: TextStyle(fontSize: 17),
+                      child: Row(
+                        children: [
+                          Text(
+                            'Código de usuario:  ',
+                            style: TextStyle(fontSize: 17),
+                          ),
+                          Text(
+                            '545874',
+                            style: Theme.of(context).textTheme.headline6,
+                          ),
+                        ],
                       ),
                     ),
                     Container(
-                      child: Text(
-                        'Correo',
-                        style: TextStyle(fontSize: 17),
+                      child: Row(
+                        children: [
+                          Text(
+                            'Correo:  ',
+                            style: TextStyle(fontSize: 17),
+                          ),
+                          Text(
+                            'ramiropino@gmail.com',
+                            style: Theme.of(context).textTheme.headline6,
+                          ),
+                        ],
                       ),
                     ),
                     Container(
-                      child: Text(
-                        'Retorno acumulado',
-                        style: TextStyle(fontSize: 17),
+                      child: Row(
+                        children: [
+                          Text(
+                            'Retorno acumulado:  ',
+                            style: TextStyle(fontSize: 17),
+                          ),
+                          Text(
+                            '5.50 s/',
+                            style: Theme.of(context).textTheme.headline6,
+                          ),
+                        ],
                       ),
                     ),
                   ],
@@ -176,6 +209,42 @@ class PerfilCard extends StatelessWidget {
                     ],
                   ),
                 ),
+                //BOTON DE CERRAR SESION
+                // Container(
+                //   child: TextButton(
+                //     onPressed: () {
+                //       Navigator.of(context).push(
+                //         MaterialPageRoute(
+                //           builder: (context) => MainScreen(),
+                //         ),
+                //       );
+                //     },
+                //     child: Row(
+                //       children: <Widget>[
+                //         Container(
+                //           decoration: BoxDecoration(
+                //               color: Color.fromARGB(255, 6, 28, 116),
+                //               shape: BoxShape.circle,
+                //               border: Border.all(color: Colors.black)),
+                //           margin: EdgeInsets.only(right: 20),
+                //           child: Icon(
+                //             Icons.contact_support,
+                //             size: 48,
+                //             color: Colors.white,
+                //           ),
+                //         ),
+                //         Text(
+                //           'CERRAR SESIÓN',
+                //           style: TextStyle(
+                //             fontSize: 20.0,
+                //             color: Color.fromARGB(255, 6, 28, 116),
+                //             fontWeight: FontWeight.w600,
+                //           ),
+                //         ),
+                //       ],
+                //     ),
+                //   ),
+                // ),
               ],
             ))
       ],

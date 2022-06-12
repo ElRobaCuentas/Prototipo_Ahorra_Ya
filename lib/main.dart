@@ -36,7 +36,8 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       // appBar: AppBar(),
-      backgroundColor: Color.fromARGB(255, 252, 219, 120),
+      backgroundColor: Color.fromRGBO(255, 218, 89, 1),
+      // backgroundColor: Color.fromARGB(255, 252, 219, 120),
       body: MainScreen(),
     );
   }

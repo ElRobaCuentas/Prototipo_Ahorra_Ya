@@ -10,7 +10,7 @@ class MainLogo extends StatelessWidget {
       decoration: BoxDecoration(
           image: DecorationImage(
             // image: NetworkImage("https://img.freepik.com/vector-gratis/dibujos-animados-alcancia_357490-101.jpg"),
-            image: AssetImage('assets/alcancia.png'),
+            image: AssetImage('assets/alcancia4.jpg'),
           ),
           color: Colors.white,
           shape: BoxShape.circle),

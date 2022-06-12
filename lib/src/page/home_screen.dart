@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
     double ancho = MediaQuery.of(context).size.width;
 
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 252, 219, 120),
+        backgroundColor: Color.fromRGBO(255, 189, 90, 1),
         body: SafeArea(
             child: Center(
                 child: Column(

@@ -12,7 +12,7 @@ class PerfilScreen extends StatelessWidget {
     double ancho = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 252, 219, 120),
+      backgroundColor: Color.fromRGBO(255, 189, 90, 1),
       body: SafeArea(
         child: Center(
           child: Column(
@@ -25,7 +25,7 @@ class PerfilScreen extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0),
-                  color: Color.fromARGB(255, 255, 232, 162),
+                  color: Color.fromRGBO(255, 222, 172, 1),
                 ),
                 height: alto * 0.8,
                 width: ancho * 0.9,
