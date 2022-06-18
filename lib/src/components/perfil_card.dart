@@ -1,18 +1,13 @@
 // import 'package:AhorraYa/src/page/scanner_screen.dart';
+import 'package:AhorraYa/src/components/camera_qr.dart';
 import 'package:flutter/material.dart';
 // import 'package:AhorraYa/src/page/main_screen.dart';
-import 'package:qrscan/qrscan.dart' as scanner;
 
 class PerfilCard extends StatelessWidget {
   const PerfilCard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    String qrValue = "Codigo QR";
-    void ScanQR() async {
-      var cameraScanResult = await scanner.scan();
-    }
-
     double alto = MediaQuery.of(context).size.height;
     double ancho = MediaQuery.of(context).size.width;
     return Column(
@@ -139,36 +134,7 @@ class PerfilCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              Container(
-                child: TextButton(
-                  onPressed: () {
-                    ScanQR();
-                  },
-                  child: Row(
-                    children: <Widget>[
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 6, 28, 116),
-                            shape: BoxShape.circle,
-                            border: Border.all(color: Colors.black)),
-                        margin: EdgeInsets.only(right: 20),
-                        child: Icon(
-                          Icons.camera_alt,
-                          size: 48,
-                          color: Colors.white,
-                        ),
-                      ),
-                      Text(
-                        (qrValue),
-                        style: TextStyle(
-                            fontSize: 20.0,
-                            color: Color.fromARGB(255, 6, 28, 116),
-                            fontWeight: FontWeight.w600),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              CameraQr(),
               Container(
                 child: Row(
                   children: <Widget>[
