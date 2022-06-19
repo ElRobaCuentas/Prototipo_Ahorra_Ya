@@ -1,5 +1,7 @@
+// import 'package:AhorraYa/src/page/scanner_screen.dart';
+import 'package:AhorraYa/src/components/camera_qr.dart';
 import 'package:flutter/material.dart';
-import 'package:AhorraYa/src/page/main_screen.dart';
+// import 'package:AhorraYa/src/page/main_screen.dart';
 
 class PerfilCard extends StatelessWidget {
   const PerfilCard({Key? key}) : super(key: key);
@@ -120,133 +122,110 @@ class PerfilCard extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 40.0,
+          height: alto * 0.070,
         ),
         Container(
-            height: alto * 0.35,
-            width: ancho * 0.8,
-            // decoration: BoxDecoration(
-            //   border: Border.all(color: Colors.black),
-            // ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[
-                Container(
-                  child: Row(
-                    children: <Widget>[
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 6, 28, 116),
-                            shape: BoxShape.circle,
-                            border: Border.all(color: Colors.black)),
-                        margin: EdgeInsets.only(right: 20),
-                        child: Icon(
-                          Icons.camera_alt,
-                          size: 48,
-                          color: Colors.white,
-                        ),
-                      ),
-                      Text(
-                        'ESCÁNER',
-                        style: TextStyle(
-                            fontSize: 20.0,
-                            color: Color.fromARGB(255, 6, 28, 116),
-                            fontWeight: FontWeight.w600),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  child: Row(
-                    children: <Widget>[
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 6, 28, 116),
-                            shape: BoxShape.circle,
-                            border: Border.all(color: Colors.black)),
-                        margin: EdgeInsets.only(right: 20),
-                        child: Icon(
-                          Icons.currency_exchange,
-                          size: 48,
-                          color: Colors.white,
-                        ),
-                      ),
-                      Text(
-                        'OBTÉN TU RETORNO',
-                        style: TextStyle(
-                          fontSize: 20.0,
+          height: alto * 0.35,
+          width: ancho * 0.8,
+          // decoration: BoxDecoration(
+          //   border: Border.all(color: Colors.black),
+          // ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              CameraQr(),
+              Container(
+                child: Row(
+                  children: <Widget>[
+                    Container(
+                      decoration: BoxDecoration(
                           color: Color.fromARGB(255, 6, 28, 116),
-                          fontWeight: FontWeight.w600,
-                        ),
+                          shape: BoxShape.circle,
+                          border: Border.all(color: Colors.black)),
+                      margin: EdgeInsets.only(right: 20),
+                      child: Icon(
+                        Icons.currency_exchange,
+                        size: 48,
+                        color: Colors.white,
                       ),
-                    ],
-                  ),
+                    ),
+                    Text(
+                      'OBTÉN TU RETORNO',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        color: Color.fromARGB(255, 6, 28, 116),
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
                 ),
-                Container(
-                  child: Row(
-                    children: <Widget>[
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 6, 28, 116),
-                            shape: BoxShape.circle,
-                            border: Border.all(color: Colors.black)),
-                        margin: EdgeInsets.only(right: 20),
-                        child: Icon(
-                          Icons.contact_support,
-                          size: 48,
-                          color: Colors.white,
-                        ),
-                      ),
-                      Text(
-                        'CONTÁCTANOS',
-                        style: TextStyle(
-                          fontSize: 20.0,
+              ),
+              Container(
+                child: Row(
+                  children: <Widget>[
+                    Container(
+                      decoration: BoxDecoration(
                           color: Color.fromARGB(255, 6, 28, 116),
-                          fontWeight: FontWeight.w600,
-                        ),
+                          shape: BoxShape.circle,
+                          border: Border.all(color: Colors.black)),
+                      margin: EdgeInsets.only(right: 20),
+                      child: Icon(
+                        Icons.contact_support,
+                        size: 48,
+                        color: Colors.white,
                       ),
-                    ],
-                  ),
+                    ),
+                    Text(
+                      'CONTÁCTANOS',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        color: Color.fromARGB(255, 6, 28, 116),
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
                 ),
-                //BOTON DE CERRAR SESION
-                // Container(
-                //   child: TextButton(
-                //     onPressed: () {
-                //       Navigator.of(context).push(
-                //         MaterialPageRoute(
-                //           builder: (context) => MainScreen(),
-                //         ),
-                //       );
-                //     },
-                //     child: Row(
-                //       children: <Widget>[
-                //         Container(
-                //           decoration: BoxDecoration(
-                //               color: Color.fromARGB(255, 6, 28, 116),
-                //               shape: BoxShape.circle,
-                //               border: Border.all(color: Colors.black)),
-                //           margin: EdgeInsets.only(right: 20),
-                //           child: Icon(
-                //             Icons.contact_support,
-                //             size: 48,
-                //             color: Colors.white,
-                //           ),
-                //         ),
-                //         Text(
-                //           'CERRAR SESIÓN',
-                //           style: TextStyle(
-                //             fontSize: 20.0,
-                //             color: Color.fromARGB(255, 6, 28, 116),
-                //             fontWeight: FontWeight.w600,
-                //           ),
-                //         ),
-                //       ],
-                //     ),
-                //   ),
-                // ),
-              ],
-            ))
+              ),
+              //BOTON DE CERRAR SESION
+              // Container(
+              //   child: TextButton(
+              //     onPressed: () {
+              //       Navigator.of(context).push(
+              //         MaterialPageRoute(
+              //           builder: (context) => MainScreen(),
+              //         ),
+              //       );
+              //     },
+              //     child: Row(
+              //       children: <Widget>[
+              //         Container(
+              //           decoration: BoxDecoration(
+              //               color: Color.fromARGB(255, 6, 28, 116),
+              //               shape: BoxShape.circle,
+              //               border: Border.all(color: Colors.black)),
+              //           margin: EdgeInsets.only(right: 20),
+              //           child: Icon(
+              //             Icons.contact_support,
+              //             size: 48,
+              //             color: Colors.white,
+              //           ),
+              //         ),
+              //         Text(
+              //           'CERRAR SESIÓN',
+              //           style: TextStyle(
+              //             fontSize: 20.0,
+              //             color: Color.fromARGB(255, 6, 28, 116),
+              //             fontWeight: FontWeight.w600,
+              //           ),
+              //         ),
+              //       ],
+              //     ),
+              //   ),
+              // ),
+            ],
+          ),
+        )
       ],
     );
   }

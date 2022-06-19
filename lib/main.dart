@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 import 'package:AhorraYa/src/page/main_screen.dart';
 
 void main() {
@@ -42,3 +41,22 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+// class MyAppSt extends StatefulWidget {
+//   const MyAppSt({Key? key}) : super(key: key);
+
+//   @override
+//   State<MyAppSt> createState() => _MyAppState();
+// }
+
+// class _MyAppState extends State<MyAppSt> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       // appBar: AppBar(),
+//       backgroundColor: Color.fromARGB(255, 202, 26, 26),
+//       // backgroundColor: Color.fromARGB(255, 252, 219, 120),
+//       body: PerfilCard(),
+//     );
+//   }
+// }

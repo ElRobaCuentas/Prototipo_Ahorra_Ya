@@ -93,7 +93,7 @@ class CategoryCard extends StatelessWidget {
                             ),
                           );
                         },
-                        icon: Icon(Icons.add),
+                        icon: Icon(Icons.arrow_drop_down_outlined),
                       ),
                     ),
                   ],
