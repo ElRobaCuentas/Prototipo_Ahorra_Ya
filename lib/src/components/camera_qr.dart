@@ -1,5 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
-import 'package:qrscan/qrscan.dart' as scanner;
+import 'package:barcode_scan/barcode_scan.dart';
+import 'package:flutter/services.dart';
+// import 'package:qrscan/qrscan.dart' as scanner;
 
 class CameraQr extends StatefulWidget {
   const CameraQr({Key? key}) : super(key: key);
@@ -9,18 +13,48 @@ class CameraQr extends StatefulWidget {
 }
 
 class _CameraQrState extends State<CameraQr> {
+  var result;
+
   @override
-  Widget build(BuildContext context) {
-    var qrValue = "Codigo QR";
-    void scanQr() async {
-      var cameraScanResult = await scanner.scan();
+  Future _scanQR() async {
+    try {
+      var qrResult = await BarcodeScanner.scan();
+      setState(() {
+        result = qrResult;
+      });
+    } on PlatformException catch (ex) {
+      if (ex.code == BarcodeScanner.cameraAccessDenied) {
+        setState(() {
+          result = "Camera permission was denied";
+        });
+      } else {
+        setState(() {
+          result = "Unknown Error $ex";
+        });
+      }
+    } on FormatException {
+      setState(() {
+        result = "Your pressed the back button before scanning anything";
+      });
+    } catch (ex) {
+      setState(() {
+        result = "Unknown Error $ex";
+      });
     }
+  }
+
+  Widget build(BuildContext context) {
+    var qrValue = "CÓDIGO QR";
+    // void scanQr() async {
+    //   var cameraScanResult = await scanner.scan();
+    // }
 
     return Container(
       child: TextButton(
         onPressed: () {
-          Text('qrValue');
-          scanQr();
+          Text(result);
+          _scanQR();
+          // scanQr();
         },
         child: Row(
           children: <Widget>[
@@ -37,7 +71,7 @@ class _CameraQrState extends State<CameraQr> {
               ),
             ),
             Text(
-              ('qrValue'),
+              (qrValue),
               style: TextStyle(
                   fontSize: 20.0,
                   color: Color.fromARGB(255, 6, 28, 116),
