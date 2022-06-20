@@ -1,7 +1,8 @@
-// import 'package:AhorraYa/src/page/scanner_screen.dart';
 import 'package:AhorraYa/src/components/camera_qr.dart';
+import 'package:AhorraYa/src/page/category_screen.dart';
+import 'package:AhorraYa/src/page/home_screen.dart';
+import 'package:AhorraYa/src/page/main_screen.dart';
 import 'package:flutter/material.dart';
-// import 'package:AhorraYa/src/page/main_screen.dart';
 
 class PerfilCard extends StatelessWidget {
   const PerfilCard({Key? key}) : super(key: key);
@@ -125,17 +126,20 @@ class PerfilCard extends StatelessWidget {
           height: alto * 0.070,
         ),
         Container(
-          height: alto * 0.35,
+          height: alto * 0.34,
           width: ancho * 0.8,
-          // decoration: BoxDecoration(
-          //   border: Border.all(color: Colors.black),
-          // ),
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.black),
+          ),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            // crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               CameraQr(),
               Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.black),
+                ),
                 child: Row(
                   children: <Widget>[
                     Container(
@@ -162,6 +166,9 @@ class PerfilCard extends StatelessWidget {
                 ),
               ),
               Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.black),
+                ),
                 child: Row(
                   children: <Widget>[
                     Container(
@@ -188,39 +195,95 @@ class PerfilCard extends StatelessWidget {
                 ),
               ),
               //BOTON DE CERRAR SESION
+              Container(
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => CategoryScreen(),
+                      ),
+                    );
+                  },
+                  //Te lleva al main sreen pero todo feo, tomar en cuenta el "push y pop"
+                  // onPressed: () {
+                  //   Navigator.of(context).push(
+                  //     MaterialPageRoute(
+                  //       builder: (context) => MainScreen(),
+                  //     ),
+                  //   );
+                  // },
+                  child: Row(
+                    children: <Widget>[
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 6, 28, 116),
+                            shape: BoxShape.circle,
+                            border: Border.all(color: Colors.black)),
+                        margin: EdgeInsets.only(right: 20),
+                        child: Icon(
+                          Icons.contact_support,
+                          size: 48,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Text(
+                        'CERRAR SESIÓN',
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          color: Color.fromARGB(255, 6, 28, 116),
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+
+              //TRATE DE PONERLO DENTRO DE UN ROW COMO EN OBTEN TU RETORNO, PERO ESTO ES  DIFERENTE PORQUE EL CONTAINER TIENE COMO HIJO A UN TEXTBUTTOM, NO A UN ROW. "TRATANDO DE ARREGLAR LA POSICION PORQUE NO ESTAN TODOS PAREJOS"
               // Container(
-              //   child: TextButton(
-              //     onPressed: () {
-              //       Navigator.of(context).push(
-              //         MaterialPageRoute(
-              //           builder: (context) => MainScreen(),
-              //         ),
-              //       );
-              //     },
-              //     child: Row(
-              //       children: <Widget>[
-              //         Container(
-              //           decoration: BoxDecoration(
-              //               color: Color.fromARGB(255, 6, 28, 116),
-              //               shape: BoxShape.circle,
-              //               border: Border.all(color: Colors.black)),
-              //           margin: EdgeInsets.only(right: 20),
-              //           child: Icon(
-              //             Icons.contact_support,
-              //             size: 48,
-              //             color: Colors.white,
-              //           ),
-              //         ),
-              //         Text(
-              //           'CERRAR SESIÓN',
-              //           style: TextStyle(
-              //             fontSize: 20.0,
+              //   decoration: BoxDecoration(
+              //     border: Border.all(color: Colors.black),
+              //   ),
+              //   child: Row(
+              //     children: [
+              //       TextButton(
+              //         onPressed: () {
+              //           Navigator.of(context).push(
+              //             MaterialPageRoute(
+              //               builder: (context) => CategoryScreen(),
+              //             ),
+              //           );
+              //         },
+              //       ),
+              //       //Te lleva al main sreen pero todo feo, tomar en cuenta el "push y pop"
+              //       // onPressed: () {
+              //       //   Navigator.of(context).push(
+              //       //     MaterialPageRoute(
+              //       //       builder: (context) => MainScreen(),
+              //       //     ),
+              //       //   );
+              //       // },
+              //       Container(
+              //         decoration: BoxDecoration(
               //             color: Color.fromARGB(255, 6, 28, 116),
-              //             fontWeight: FontWeight.w600,
-              //           ),
+              //             shape: BoxShape.circle,
+              //             border: Border.all(color: Colors.black)),
+              //         margin: EdgeInsets.only(right: 20),
+              //         child: Icon(
+              //           Icons.contact_support,
+              //           size: 48,
+              //           color: Colors.white,
               //         ),
-              //       ],
-              //     ),
+              //       ),
+              //       Text(
+              //         'CERRAR SESIÓN',
+              //         style: TextStyle(
+              //           fontSize: 20.0,
+              //           color: Color.fromARGB(255, 6, 28, 116),
+              //           fontWeight: FontWeight.w600,
+              //         ),
+              //       ),
+              //     ],
               //   ),
               // ),
             ],

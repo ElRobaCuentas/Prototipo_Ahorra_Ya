@@ -48,20 +48,23 @@ class LoginScreen extends StatelessWidget {
                 ],
               ),
               child: Column(
-                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
+                    height: alto * 0.3,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.black),
+                    ),
                     margin: EdgeInsets.only(
-                        top: 30, bottom: 20, left: 20, right: 20),
+                        top: 60, bottom: 20, left: 20, right: 20),
                     child: Column(
-                      // mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
                           child: TextField(
                             decoration: InputDecoration(
                                 icon: Icon(
-                                  Icons.email_outlined,
-                                  color: Colors.grey[500],
+                                  Icons.account_circle_rounded,
+                                  color: Colors.grey[700],
                                 ),
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(color: Colors.black),
@@ -76,7 +79,7 @@ class LoginScreen extends StatelessWidget {
                                 contentPadding: EdgeInsets.all(10.0),
                                 hintText: 'Nombre de Usuario',
                                 hintStyle: TextStyle(
-                                    fontSize: 14, color: Colors.grey[300])),
+                                    fontSize: 14, color: Colors.grey[600])),
                           ),
                         ),
                         SizedBox(
@@ -86,8 +89,8 @@ class LoginScreen extends StatelessWidget {
                           child: TextField(
                             decoration: InputDecoration(
                                 icon: Icon(
-                                  Icons.email_outlined,
-                                  color: Colors.grey[500],
+                                  Icons.lock,
+                                  color: Colors.grey[700],
                                 ),
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(color: Colors.black),
@@ -102,7 +105,8 @@ class LoginScreen extends StatelessWidget {
                                 contentPadding: EdgeInsets.all(10.0),
                                 hintText: 'Contraseña',
                                 hintStyle: TextStyle(
-                                    fontSize: 14, color: Colors.grey[300])),
+                                    fontSize: 14, color: Colors.grey[600])),
+                            obscureText: true,
                           ),
                         ),
                       ],
@@ -145,8 +149,7 @@ class LoginScreen extends StatelessWidget {
                           ),
                         );
                       },
-                      icon: Icon(
-                          Icons.arrow_forward_ios_outlined), //para adelante
+                      icon: Icon(Icons.arrow_forward), //para adelante
                       // icon: Icon(Icons.arrow_forward_ios_outlined), //para atras
                       color: Colors.black,
                     ),

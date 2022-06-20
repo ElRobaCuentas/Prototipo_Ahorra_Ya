@@ -57,8 +57,8 @@ class SignupScreen extends StatelessWidget {
                         TextField(
                           decoration: InputDecoration(
                               icon: Icon(
-                                Icons.email_outlined,
-                                color: Colors.grey[500],
+                                Icons.account_circle_rounded,
+                                color: Colors.grey[700],
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(color: Colors.black),
@@ -73,7 +73,7 @@ class SignupScreen extends StatelessWidget {
                               contentPadding: EdgeInsets.all(10.0),
                               hintText: 'Nombres',
                               hintStyle: TextStyle(
-                                  fontSize: 14, color: Colors.grey[300])),
+                                  fontSize: 14, color: Colors.grey[600])),
                         ),
                         SizedBox(
                           height: alto * 0.020,
@@ -81,8 +81,8 @@ class SignupScreen extends StatelessWidget {
                         TextField(
                           decoration: InputDecoration(
                               icon: Icon(
-                                Icons.email_outlined,
-                                color: Colors.grey[500],
+                                Icons.account_circle_rounded,
+                                color: Colors.grey[700],
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(color: Colors.black),
@@ -97,7 +97,7 @@ class SignupScreen extends StatelessWidget {
                               contentPadding: EdgeInsets.all(10.0),
                               hintText: 'Apellidos',
                               hintStyle: TextStyle(
-                                  fontSize: 14, color: Colors.grey[300])),
+                                  fontSize: 14, color: Colors.grey[600])),
                         ),
                         SizedBox(
                           height: alto * 0.020,
@@ -105,8 +105,8 @@ class SignupScreen extends StatelessWidget {
                         TextField(
                           decoration: InputDecoration(
                               icon: Icon(
-                                Icons.email_outlined,
-                                color: Colors.grey[500],
+                                Icons.email_rounded,
+                                color: Colors.grey[700],
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(color: Colors.black),
@@ -121,7 +121,7 @@ class SignupScreen extends StatelessWidget {
                               contentPadding: EdgeInsets.all(10.0),
                               hintText: 'Correo Electrónico',
                               hintStyle: TextStyle(
-                                  fontSize: 14, color: Colors.grey[300])),
+                                  fontSize: 14, color: Colors.grey[600])),
                         ),
                         SizedBox(
                           height: alto * 0.020,
@@ -129,8 +129,8 @@ class SignupScreen extends StatelessWidget {
                         TextField(
                           decoration: InputDecoration(
                               icon: Icon(
-                                Icons.email_outlined,
-                                color: Colors.grey[500],
+                                Icons.lock,
+                                color: Colors.grey[700],
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(color: Colors.black),
@@ -145,7 +145,8 @@ class SignupScreen extends StatelessWidget {
                               contentPadding: EdgeInsets.all(10.0),
                               hintText: 'Contraseña',
                               hintStyle: TextStyle(
-                                  fontSize: 14, color: Colors.grey[300])),
+                                  fontSize: 14, color: Colors.grey[600])),
+                          obscureText: true,
                         ),
                       ],
                     ),
@@ -187,8 +188,7 @@ class SignupScreen extends StatelessWidget {
                           ),
                         );
                       },
-                      icon:
-                          Icon(Icons.arrow_back_ios_new_outlined), //para atras
+                      icon: Icon(Icons.arrow_back), //para atras
                       // icon: Icon(Icons.arrow_forward_ios_outlined), //para adelante
                       color: Colors.black,
                     ),

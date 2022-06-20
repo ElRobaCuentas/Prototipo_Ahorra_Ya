@@ -17,9 +17,12 @@ class _CameraQrState extends State<CameraQr> {
     }
 
     return Container(
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.black),
+      ),
       child: TextButton(
         onPressed: () {
-          Text('qrValue');
+          // Text('qrValue');
           scanQr();
         },
         child: Row(
