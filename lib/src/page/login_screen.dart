@@ -1,4 +1,4 @@
-import 'package:AhorraYa/src/components/perfil_card.dart';
+import 'package:AhorraYa/src/page/main_screen.dart';
 import 'package:AhorraYa/src/page/perfil_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -8,8 +8,8 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double alto = MediaQuery.of(context).size.height;
+    // double ancho = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 252, 201, 47),
       body: Stack(
         children: [
           Positioned(
@@ -27,13 +27,13 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               height: alto * 0.4,
-              color: Colors.white,
+              color: Color.fromRGBO(255, 218, 89, 1),
             ),
           ),
           Positioned(
-            top: 200,
+            top: 250,
             child: Container(
-              height: alto * 0.5,
+              height: alto * 0.3,
               width: MediaQuery.of(context).size.width - 40,
               margin: EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
@@ -48,62 +48,57 @@ class LoginScreen extends StatelessWidget {
                 ],
               ),
               child: Column(
-                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
                     margin: EdgeInsets.only(
                         top: 30, bottom: 20, left: 20, right: 20),
                     child: Column(
-                      // mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Container(
-                          child: TextField(
-                            decoration: InputDecoration(
-                                icon: Icon(
-                                  Icons.email_outlined,
-                                  color: Colors.grey[500],
-                                ),
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.black),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(30.0)),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.black),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(30.0)),
-                                ),
-                                contentPadding: EdgeInsets.all(10.0),
-                                hintText: 'Nombre de Usuario',
-                                hintStyle: TextStyle(
-                                    fontSize: 14, color: Colors.grey[300])),
-                          ),
+                        TextField(
+                          decoration: InputDecoration(
+                              icon: Icon(
+                                Icons.email_rounded,
+                                color: Colors.grey[700],
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.black),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(30.0)),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.black),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(30.0)),
+                              ),
+                              contentPadding: EdgeInsets.all(10.0),
+                              hintText: 'Correo Electrónico',
+                              hintStyle: TextStyle(
+                                  fontSize: 14, color: Colors.grey[600])),
                         ),
                         SizedBox(
-                          height: alto * 0.080,
+                          height: 50,
                         ),
-                        Container(
-                          child: TextField(
-                            decoration: InputDecoration(
-                                icon: Icon(
-                                  Icons.email_outlined,
-                                  color: Colors.grey[500],
-                                ),
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.black),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(30.0)),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.black),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(30.0)),
-                                ),
-                                contentPadding: EdgeInsets.all(10.0),
-                                hintText: 'Contraseña',
-                                hintStyle: TextStyle(
-                                    fontSize: 14, color: Colors.grey[300])),
-                          ),
+                        TextField(
+                          decoration: InputDecoration(
+                              icon: Icon(
+                                Icons.lock,
+                                color: Colors.grey[700],
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.black),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(30.0)),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.black),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(30.0)),
+                              ),
+                              contentPadding: EdgeInsets.all(10.0),
+                              hintText: 'Contraseña',
+                              hintStyle: TextStyle(
+                                  fontSize: 14, color: Colors.grey[600])),
+                          obscureText: true,
                         ),
                       ],
                     ),
@@ -113,7 +108,7 @@ class LoginScreen extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 485,
+            top: 450,
             right: 0,
             left: 0,
             child: Center(
@@ -129,12 +124,7 @@ class LoginScreen extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                       // border: Border.all(color: Colors.black),
-                      gradient: LinearGradient(
-                        colors: [
-                          Color.fromARGB(255, 252, 201, 47),
-                          Color.fromARGB(255, 255, 255, 255)
-                        ],
-                      ),
+                      color: Color.fromRGBO(255, 218, 89, 1),
                       borderRadius: BorderRadius.circular(40)),
                   child: Container(
                     child: IconButton(
@@ -145,9 +135,8 @@ class LoginScreen extends StatelessWidget {
                           ),
                         );
                       },
-                      icon: Icon(
-                          Icons.arrow_forward_ios_outlined), //para adelante
-                      // icon: Icon(Icons.arrow_forward_ios_outlined), //para atras
+                      icon: Icon(Icons.login), //para atras
+                      // icon: Icon(Icons.arrow_forward_ios_outlined), //para adelante
                       color: Colors.black,
                     ),
                   ),

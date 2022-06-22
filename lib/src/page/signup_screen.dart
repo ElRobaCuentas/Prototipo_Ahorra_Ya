@@ -27,13 +27,13 @@ class SignupScreen extends StatelessWidget {
                 ),
               ),
               height: alto * 0.4,
-              color: Color.fromARGB(255, 252, 201, 47),
+              color: Color.fromRGBO(255, 218, 89, 1),
             ),
           ),
           Positioned(
-            top: 200,
+            top: 250,
             child: Container(
-              height: alto * 0.5,
+              height: alto * 0.4,
               width: MediaQuery.of(context).size.width - 40,
               margin: EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
@@ -57,8 +57,8 @@ class SignupScreen extends StatelessWidget {
                         TextField(
                           decoration: InputDecoration(
                               icon: Icon(
-                                Icons.email_outlined,
-                                color: Colors.grey[500],
+                                Icons.account_circle_rounded,
+                                color: Colors.grey[700],
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(color: Colors.black),
@@ -73,7 +73,7 @@ class SignupScreen extends StatelessWidget {
                               contentPadding: EdgeInsets.all(10.0),
                               hintText: 'Nombres',
                               hintStyle: TextStyle(
-                                  fontSize: 14, color: Colors.grey[300])),
+                                  fontSize: 14, color: Colors.grey[600])),
                         ),
                         SizedBox(
                           height: alto * 0.020,
@@ -81,8 +81,8 @@ class SignupScreen extends StatelessWidget {
                         TextField(
                           decoration: InputDecoration(
                               icon: Icon(
-                                Icons.email_outlined,
-                                color: Colors.grey[500],
+                                Icons.account_circle_rounded,
+                                color: Colors.grey[700],
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(color: Colors.black),
@@ -97,7 +97,7 @@ class SignupScreen extends StatelessWidget {
                               contentPadding: EdgeInsets.all(10.0),
                               hintText: 'Apellidos',
                               hintStyle: TextStyle(
-                                  fontSize: 14, color: Colors.grey[300])),
+                                  fontSize: 14, color: Colors.grey[600])),
                         ),
                         SizedBox(
                           height: alto * 0.020,
@@ -105,8 +105,8 @@ class SignupScreen extends StatelessWidget {
                         TextField(
                           decoration: InputDecoration(
                               icon: Icon(
-                                Icons.email_outlined,
-                                color: Colors.grey[500],
+                                Icons.email_rounded,
+                                color: Colors.grey[700],
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(color: Colors.black),
@@ -121,7 +121,7 @@ class SignupScreen extends StatelessWidget {
                               contentPadding: EdgeInsets.all(10.0),
                               hintText: 'Correo Electrónico',
                               hintStyle: TextStyle(
-                                  fontSize: 14, color: Colors.grey[300])),
+                                  fontSize: 14, color: Colors.grey[600])),
                         ),
                         SizedBox(
                           height: alto * 0.020,
@@ -129,8 +129,8 @@ class SignupScreen extends StatelessWidget {
                         TextField(
                           decoration: InputDecoration(
                               icon: Icon(
-                                Icons.email_outlined,
-                                color: Colors.grey[500],
+                                Icons.lock,
+                                color: Colors.grey[700],
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(color: Colors.black),
@@ -145,7 +145,8 @@ class SignupScreen extends StatelessWidget {
                               contentPadding: EdgeInsets.all(10.0),
                               hintText: 'Contraseña',
                               hintStyle: TextStyle(
-                                  fontSize: 14, color: Colors.grey[300])),
+                                  fontSize: 14, color: Colors.grey[600])),
+                          obscureText: true,
                         ),
                       ],
                     ),
@@ -155,7 +156,7 @@ class SignupScreen extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 485,
+            top: 535,
             right: 0,
             left: 0,
             child: Center(
@@ -171,12 +172,7 @@ class SignupScreen extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                       // border: Border.all(color: Colors.black),
-                      gradient: LinearGradient(
-                        colors: [
-                          Color.fromARGB(255, 252, 201, 47),
-                          Color.fromARGB(255, 255, 255, 255)
-                        ],
-                      ),
+                      color: Color.fromRGBO(255, 218, 89, 1),
                       borderRadius: BorderRadius.circular(40)),
                   child: Container(
                     child: IconButton(
@@ -187,8 +183,7 @@ class SignupScreen extends StatelessWidget {
                           ),
                         );
                       },
-                      icon:
-                          Icon(Icons.arrow_back_ios_new_outlined), //para atras
+                      icon: Icon(Icons.login), //para atras
                       // icon: Icon(Icons.arrow_forward_ios_outlined), //para adelante
                       color: Colors.black,
                     ),
