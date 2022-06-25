@@ -37,7 +37,7 @@ class _CameraQrState extends State<CameraQr> {
               ),
             ),
             Text(
-              ('qrValue'),
+              ('ESCÁNER'),
               style: TextStyle(
                   fontSize: 20.0,
                   color: Color.fromARGB(255, 6, 28, 116),
