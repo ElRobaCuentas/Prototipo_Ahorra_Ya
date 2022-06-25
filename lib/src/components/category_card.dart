@@ -1,6 +1,6 @@
 import 'dart:math';
-
-import 'package:AhorraYa/src/page/bebidas.screen.dart';
+import 'package:AhorraYa/src/page/bebidas_screen.dart';
+import 'package:AhorraYa/src/page/products_screen.dart';
 import 'package:flutter/material.dart';
 
 class CategoryCard extends StatelessWidget {
@@ -89,6 +89,7 @@ class CategoryCard extends StatelessWidget {
                         onPressed: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
+                              // builder: (context) => ProductsScreen(),
                               builder: (context) => BebidasScreen(),
                             ),
                           );
