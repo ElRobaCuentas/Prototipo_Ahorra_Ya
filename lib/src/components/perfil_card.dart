@@ -1,7 +1,7 @@
 // import 'package:AhorraYa/src/page/scanner_screen.dart';
 import 'package:AhorraYa/src/components/camera_qr.dart';
 // import 'package:AhorraYa/src/page/main_screen.dart';
-import 'package:AhorraYa/src/page/products_screen.dart';
+// import 'package:AhorraYa/src/page/products_screen.dart';
 import 'package:flutter/material.dart';
 // import 'package:AhorraYa/src/page/main_screen.dart';
 
