@@ -1,4 +1,4 @@
-import 'package:AhorraYa/src/page/bebidas_screen.dart';
+import 'dart:async';
 import 'package:AhorraYa/src/page/products_screen.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
@@ -38,6 +38,9 @@ class _CameraScreenState extends State<CameraScreen> {
 
   @override
   Widget build(BuildContext context) {
+    double alto = MediaQuery.of(context).size.height;
+    double ancho = MediaQuery.of(context).size.width;
+
     if (!controller.value.isInitialized) {
       return const SizedBox(
         child: Center(
@@ -48,26 +51,26 @@ class _CameraScreenState extends State<CameraScreen> {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.only(top: 100),
           child: Center(
             child: SizedBox(
-              height: 600,
-              width: 400,
+              height: alto * 0.7,
+              // width: 400,
               child: CameraPreview(controller),
             ),
           ),
         ),
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.only(top: 32),
           child: ElevatedButton(
             onPressed: () async {
-              // pictureFile = await controller.takePicture();
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => ProductsScreen(),
-                  // builder: (context) => BebidasScreen(),
-                ),
-              );
+              Timer(Duration(seconds: 2), (() {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => ProductsScreen(),
+                  ),
+                );
+              }));
               setState(() {});
             },
             child: const Text('Scanear'),
@@ -78,8 +81,6 @@ class _CameraScreenState extends State<CameraScreen> {
             pictureFile!.path,
             height: 200,
           )
-        //Android/iOS
-        // Image.file(File(pictureFile!.path)))
       ],
     );
   }
