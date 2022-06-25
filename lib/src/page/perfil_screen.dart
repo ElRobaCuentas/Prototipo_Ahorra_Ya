@@ -19,10 +19,6 @@ class PerfilScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Container(
-                  //height: alto * 0.025,
-                  // color: Colors.red,
-                  ),
-              Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0),
                   color: Color.fromRGBO(255, 222, 172, 1),
