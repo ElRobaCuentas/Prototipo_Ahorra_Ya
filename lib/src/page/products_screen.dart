@@ -1,3 +1,4 @@
+import 'package:AhorraYa/src/page/perfil_screen.dart';
 import 'package:flutter/material.dart';
 
 class ProductsScreen extends StatelessWidget {
@@ -39,13 +40,17 @@ class ProductsScreen extends StatelessWidget {
                       height: alto * 0.2,
                     ),
                     Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.black),
-                      ),
+                      // decoration: BoxDecoration(
+                      //   border: Border.all(color: Colors.black),
+                      // ),
                       child: Center(
                         child: Container(
-                          decoration: BoxDecoration(
-                            border: Border.all(color: Colors.red),
+                          // decoration: BoxDecoration(
+                          //   border: Border.all(color: Colors.red),
+                          // ),
+                          child: Image.asset(
+                            'assets/cachito.jpg',
+                            fit: BoxFit.contain,
                           ),
                           width: ancho * 0.85,
                           height: alto * 0.35,
@@ -54,9 +59,9 @@ class ProductsScreen extends StatelessWidget {
                       height: alto * 0.4,
                     ),
                     Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.black),
-                      ),
+                      // decoration: BoxDecoration(
+                      //   border: Border.all(color: Colors.black),
+                      // ),
                       child: Center(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -78,7 +83,13 @@ class ProductsScreen extends StatelessWidget {
                                   color: Colors.red,
                                   borderRadius: BorderRadius.circular(8)),
                               child: TextButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (context) => PerfilScreen(),
+                                    ),
+                                  );
+                                },
                                 child: Text(
                                   'Salir',
                                   style: TextStyle(color: Colors.white),
