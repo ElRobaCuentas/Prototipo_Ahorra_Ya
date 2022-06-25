@@ -1,4 +1,5 @@
-import 'package:AhorraYa/src/page/bebidas.screen.dart';
+import 'package:AhorraYa/src/page/bebidas_screen.dart';
+import 'package:AhorraYa/src/page/products_screen.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 
@@ -63,7 +64,8 @@ class _CameraScreenState extends State<CameraScreen> {
               // pictureFile = await controller.takePicture();
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (context) => BebidasScreen(),
+                  builder: (context) => ProductsScreen(),
+                  // builder: (context) => BebidasScreen(),
                 ),
               );
               setState(() {});
