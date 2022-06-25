@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:AhorraYa/src/page/bebidas.screen.dart';
 import 'package:flutter/material.dart';
 

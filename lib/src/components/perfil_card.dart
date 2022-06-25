@@ -1,5 +1,6 @@
 // import 'package:AhorraYa/src/page/scanner_screen.dart';
-import 'package:AhorraYa/src/components/camera_qr.dart';
+import 'package:AhorraYa/src/page/camera_screen.dart';
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 // import 'package:AhorraYa/src/page/main_screen.dart';
 
@@ -134,7 +135,44 @@ class PerfilCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              CameraQr(),
+              // CameraQr(),
+              Container(
+                child: TextButton(
+                  onPressed: () async {
+                    await availableCameras().then(
+                      (value) => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => CameraScreen(cameras: value),
+                        ),
+                      ),
+                    );
+                  },
+                  child: Row(
+                    children: <Widget>[
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 6, 28, 116),
+                            shape: BoxShape.circle,
+                            border: Border.all(color: Colors.black)),
+                        margin: EdgeInsets.only(right: 20),
+                        child: Icon(
+                          Icons.camera_alt,
+                          size: 48,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Text(
+                        ('ESCÁNER 11'),
+                        style: TextStyle(
+                            fontSize: 20.0,
+                            color: Color.fromARGB(255, 6, 28, 116),
+                            fontWeight: FontWeight.w600),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
               Container(
                 child: Row(
                   children: <Widget>[
