@@ -1,13 +1,12 @@
 // import 'package:AhorraYa/src/page/scanner_screen.dart';
 import 'package:AhorraYa/main.dart';
 import 'package:AhorraYa/src/page/camera_screen.dart';
-import 'package:AhorraYa/src/page/main_screen.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 // import 'package:AhorraYa/src/page/main_screen.dart';
 
-class PerfilCard extends StatelessWidget {
-  const PerfilCard({Key? key}) : super(key: key);
+class PerfilCard2 extends StatelessWidget {
+  const PerfilCard2({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -112,7 +111,7 @@ class PerfilCard extends StatelessWidget {
                             style: TextStyle(fontSize: 17),
                           ),
                           Text(
-                            '5.50 s/',
+                            '6.00 s/',
                             style: Theme.of(context).textTheme.headline6,
                           ),
                         ],
@@ -128,7 +127,7 @@ class PerfilCard extends StatelessWidget {
           height: alto * 0.070,
         ),
         Container(
-          height: alto * 0.30,
+          height: alto * 0.3,
           width: ancho * 0.8,
           // decoration: BoxDecoration(
           //   border: Border.all(color: Colors.black),

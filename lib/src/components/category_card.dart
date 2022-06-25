@@ -1,4 +1,4 @@
-import 'package:AhorraYa/src/page/bebidas_screen.dart';
+import 'package:AhorraYa/src/page/home_screen.dart';
 import 'package:AhorraYa/src/page/products_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -88,12 +88,12 @@ class CategoryCard extends StatelessWidget {
                         onPressed: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => ProductsScreen(),
+                              builder: (context) => HomeScreen(),
                               // builder: (context) => BebidasScreen(),
                             ),
                           );
                         },
-                        icon: Icon(Icons.arrow_drop_down_outlined),
+                        icon: Icon(Icons.navigate_next),
                       ),
                     ),
                   ],
@@ -144,11 +144,11 @@ class CategoryCard extends StatelessWidget {
                         onPressed: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => BebidasScreen(),
+                              builder: (context) => HomeScreen(),
                             ),
                           );
                         },
-                        icon: Icon(Icons.add),
+                        icon: Icon(Icons.navigate_next),
                       ),
                     ),
                   ],
@@ -199,11 +199,11 @@ class CategoryCard extends StatelessWidget {
                         onPressed: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => BebidasScreen(),
+                              builder: (context) => HomeScreen(),
                             ),
                           );
                         },
-                        icon: Icon(Icons.add),
+                        icon: Icon(Icons.navigate_next),
                       ),
                     ),
                   ],
@@ -256,11 +256,11 @@ class CategoryCard extends StatelessWidget {
                         onPressed: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => BebidasScreen(),
+                              builder: (context) => HomeScreen(),
                             ),
                           );
                         },
-                        icon: Icon(Icons.add),
+                        icon: Icon(Icons.navigate_next),
                       ),
                     ),
                   ],
@@ -313,11 +313,11 @@ class CategoryCard extends StatelessWidget {
                         onPressed: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => BebidasScreen(),
+                              builder: (context) => ProductsScreen(),
                             ),
                           );
                         },
-                        icon: Icon(Icons.add),
+                        icon: Icon(Icons.navigate_next),
                       ),
                     ),
                   ],

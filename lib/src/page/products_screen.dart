@@ -1,4 +1,5 @@
 import 'package:AhorraYa/src/page/perfil_screen.dart';
+import 'package:AhorraYa/src/page/perfil_screen_2.dart';
 import 'package:flutter/material.dart';
 
 class ProductsScreen extends StatelessWidget {
@@ -33,8 +34,11 @@ class ProductsScreen extends StatelessWidget {
                       ),
                       child: Center(
                         child: Text(
-                          'Retorno identificado',
-                          style: TextStyle(fontSize: 30.0),
+                          'Retorno Identificado',
+                          style: TextStyle(
+                              fontSize: 30.0,
+                              fontWeight: FontWeight.w500,
+                              color: Color.fromARGB(255, 6, 28, 116)),
                         ),
                       ),
                       height: alto * 0.2,
@@ -49,14 +53,14 @@ class ProductsScreen extends StatelessWidget {
                           //   border: Border.all(color: Colors.red),
                           // ),
                           child: Image.asset(
-                            'assets/cachito.jpg',
+                            'assets/bimbo.jpg',
                             fit: BoxFit.contain,
                           ),
-                          width: ancho * 0.85,
+                          // width: ancho * 0.7,
                           height: alto * 0.35,
                         ),
                       ),
-                      height: alto * 0.4,
+                      height: alto * 0.35,
                     ),
                     Container(
                       // decoration: BoxDecoration(
@@ -75,18 +79,19 @@ class ProductsScreen extends StatelessWidget {
                               style: TextStyle(fontSize: 30.0),
                             ),
                             Text(
-                              'S/5.50',
+                              'S/0.50',
                               style: TextStyle(fontSize: 30.0),
                             ),
                             Container(
+                              width: 120,
                               decoration: BoxDecoration(
-                                  color: Colors.red,
+                                  color: Color.fromARGB(255, 6, 28, 116),
                                   borderRadius: BorderRadius.circular(8)),
                               child: TextButton(
                                 onPressed: () {
                                   Navigator.of(context).push(
                                     MaterialPageRoute(
-                                      builder: (context) => PerfilScreen(),
+                                      builder: (context) => PerfilScreen2(),
                                     ),
                                   );
                                 },
