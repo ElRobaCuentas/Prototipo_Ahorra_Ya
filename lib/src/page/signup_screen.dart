@@ -156,7 +156,8 @@ class SignupScreen extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 535,
+            // top: 535,
+            top: alto * 0.8,
             right: 0,
             left: 0,
             child: Center(
